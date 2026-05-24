@@ -199,9 +199,9 @@ li {
     transform: translateY(1px);
 }
 
-#themeToggle .fa-sun { display: none; }
-[data-theme="dark"] #themeToggle .fa-moon { display: none; }
-[data-theme="dark"] #themeToggle .fa-sun { display: inline-block; }
+#themeToggle .icon-sun { display: none; }
+[data-theme="dark"] #themeToggle .icon-moon { display: none; }
+[data-theme="dark"] #themeToggle .icon-sun { display: inline-block; }
 
 /* ── Mobile menu ── */
 .btn__menu {
