@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookNook</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+        (function() {
+            let t = localStorage.getItem('theme') || 'light';
+            document.documentElement.dataset.theme = t;
+        })();
+    </script>
+    <script src="https://kit.fontawesome.com/de4933ee66.js" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script type="module" src="/components.js"></script>
+</head>
+<body>
+<div class="dev-banner">
+    <span class="dev-banner__label">In Development</span>
+    Docker installation &amp; usage instructions are coming soon — the landing page is the first milestone.
+</div>
+<section id="landing">
+    <nav>
+        <div class="nav__container">
+            <img class="logo" src="/assets/logo.svg" alt="">
+            <ul class="nav__links">
+                <li><a class="nav__link" href="#">Home</a></li>
+                <li><a class="nav__link" href="#highlights">Features</a></li>
+                <li><a class="nav__link nav__link--primary" href="#usage">Usage</a></li>
+            </ul>
+            <button class="btn__theme" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <div class="menu__top">
+                    <span class="menu__wordmark">BookNook</span>
+                    <button onclick="closeMenu()" class="menu__close" aria-label="Close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                        <a class="menu__link" onclick="closeMenu()" href="#">
+                            <span class="menu__link-index">01</span><span>Home</span>
+                        </a>
+                    </li>
+                    <li class="menu__list">
+                        <a class="menu__link" onclick="closeMenu()" href="#features">
+                            <span class="menu__link-index">02</span><span>Features</span>
+                        </a>
+                    </li>
+                    <li class="menu__list">
+                        <a class="menu__link no-cursor" onclick="closeMenu()" href="#usage">
+                            <span class="menu__link-index">03</span><span>Usage</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="menu__footer">
+                    <span class="menu__copy">© 2026 BookNook</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header__container">
+        <div class="header__description">
+            <p class="header__eyebrow">Open source · Self-hosted</p>
+            <h1>Own your <span class="text">library</span>, completely.</h1>
+            <h2>Beautiful book management you run on your own server — no subscriptions, no lock-in.</h2>
+            <div class="header__actions">
+                <a target="_blank" href="https://github.com/zadenmaestas/booknook">
+                    <button class="btn"> <i class="fa fa-github"></i>Github</button>
+                </a>
+                <a href="#" class="header__link"><i class="fas fa-book"></i>Documentation (Coming soon)<i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <figure class="header__image">
+            <img src="/assets/hero-illustration-warm.svg" alt="">
+        </figure>
+    </header>
+</section>
+<main>
+    <section id="highlights">
+        <div class="container">
+            <div class="row">
+                <h2 class="section__title">
+                    Why choose <span class="purple">BookNook</span>
+                </h2>
+                <div class="highlight__wrapper">
+                    <div class="highlight">
+                        <div class="highlight__img">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                            <h3 class="highlight__subtitle">Easy and Extensible</h3>
+                            <p class="highlight__para">
+                            Get started with our docker image and extend it with your own customizations.
+                            </p>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight__img">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="highlight__subtitle">You name it we aim to support it</h3>
+                        <p class="highlight__para">
+                            Book support for various formats, languages, and genres
+                        </p>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight__img">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="highlight__subtitle">Curated for You</h3>
+                        <p class="highlight__para">
+                            Personalized recommendations based on your reading history and taste
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="row row__column">
+            <a href="#" class="footer__link">
+                <figure class="footer__logo">
+                    <img src="assets/logo-dark.svg" class="footer__logo--img" alt="Bookstore Logo">
+                </figure>
+            </a>
+            <div class="footer__list">
+                <a href="#" class="footer__link">Home</a>
+                <a href="#highlights" class="footer__link">Features</a>
+                <a href="#" class="footer__link">Usage</a>
+            </div>
+            <div class="footer__copyright">Copyright &copy; 2026 Zaden Maestas</div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

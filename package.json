@@ -5,11 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "$npm_execpath run build && vite preview",
-    "deploy": "$npm_execpath run build && wrangler deploy",
+    "deploy": "cp index.html public/index.html && $npm_execpath run build && wrangler deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
-    "@hono/node-server": "^2.0.3",
     "hono": "^4.12.21"
   },
   "devDependencies": {

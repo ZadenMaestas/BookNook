@@ -1,6 +1,8 @@
 # prod
 dist/
 dist-server/
+# Build script output
+public/index.html
 
 # dev
 .yarn/
